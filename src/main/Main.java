@@ -1,11 +1,18 @@
 package main;
+import gui.BuergeraemterControl;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-public class Main {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("hello");
-		System.out.println("allo");
+public class Main extends Application{
+	
+	@Override
+	public void start(Stage primaryStage) {
+		new BuergeraemterControl(primaryStage);
+	}	
+	
+	public static void main(String[] args){
+		launch(args);
 	}
+
 
 }
