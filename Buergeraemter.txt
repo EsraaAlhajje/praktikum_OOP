@@ -1,5 +1,5 @@
 Daten des buergeramts
- Name des buergeramts	Esraa
-oeffnungszeit des buergeramts:	 22.0 33.0
-Strasse und Hausnummer des buergeramts:	44qaa
-Dienstleistungen des buergeramts:	3ee
+ Name des buergeramts	esra
+oeffnungszeit des buergeramts:	 22.0 44.0
+Strasse und Hausnummer des buergeramts:	huzu
+Dienstleistungen des buergeramts:	ijjh
