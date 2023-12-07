@@ -4,11 +4,11 @@ import java.io.IOException;
 
 import business.BuergeraemterModel;
 import javafx.stage.Stage;
-import ownUtil.Observer;
+import ownUtil.ConcreteObserver;
 
 
 
-public class BuergeraemterControl implements Observer{
+public class BuergeraemterControl implements ConcreteObserver{
 
 	
 	private BuergeraemterView buergeraemterView;
@@ -29,7 +29,7 @@ public class BuergeraemterControl implements Observer{
 	   		if("csv".equals(typ)){
 	   			buergeraemterModel.schreibeBuergeraemterInCsvDatei();
 	   			buergeraemterView.zeigeInformationsfensterAn(
-	   				"Die BÃ¼rgerÃ¤mter wurden gespeichert!");
+	   				"Die Bürgerämter wurden gespeichert!");
 	   			
 	   			
 	   			
@@ -37,7 +37,7 @@ public class BuergeraemterControl implements Observer{
 	   		else{
 	   			buergeraemterModel.schreibeBuergeraemterInTxtDatei();
 	   			buergeraemterView.zeigeInformationsfensterAn(
-		   				"Die BÃ¼rgerÃ¤mter wurden gespeichert!");
+		   				"Die Bürgerämter wurden gespeichert!");
 	   		}
 	    } 
 	   	

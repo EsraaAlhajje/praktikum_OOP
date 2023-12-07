@@ -21,7 +21,7 @@ public class StaedtischeEinrichtungenView {
 	
     	
     	private Pane pane = new  Pane();
-    	private Label lblAnzeigeBuergeraeamter = new Label("Anzeige BÃ¼rgerÃ¤mter");
+    	private Label lblAnzeigeBuergeraeamter = new Label("Anzeige Bürgerämter");
     	private TextArea txtAnzeigeBuergeraeamter  = new TextArea();
     	private Button btnAnzeigeBuergeraeamter = new Button("Anzeige");
     	
@@ -30,7 +30,7 @@ public class StaedtischeEinrichtungenView {
     		BuergeraemterModel buergeraemterModel){
     		Scene scene = new Scene(this.pane, 560, 340);
     		primaryStage.setScene(scene);
-    		primaryStage.setTitle("Anzeige von stÃ¤dtischen " + "Einrichtungen");
+    		primaryStage.setTitle("Anzeige von städtischen " + "Einrichtungen");
     		primaryStage.show();
     		this.staedtischeEinrichtungenControl = staedtischeEinrichtungenControl;
         	this.buergeraemterModel = buergeraemterModel;
@@ -79,7 +79,7 @@ public class StaedtischeEinrichtungenView {
     		}
     		else{
     			zeigeInformationsfensterAn(
- 				"Bisher wurde kein BÃ¼rgeramt aufgenommen!");
+ 				"Bisher wurde kein Bürgeramt aufgenommen!");
     		}
     }	
    

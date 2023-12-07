@@ -3,10 +3,10 @@ package gui.guiStaedtischeEinrichtungen;
 import business.BuergeraemterModel;
 import gui.guiBuergeraemter.BuergeraemterView;
 import javafx.stage.Stage;
-import ownUtil.Observer;
+import ownUtil.ConcreteObserver;
 
 
-public class StaedtischeEinrichtungenControl implements Observer {
+public class StaedtischeEinrichtungenControl implements ConcreteObserver {
 	
 	private StaedtischeEinrichtungenView staedtischeEinrichtungenView;
 	private BuergeraemterModel buergeraemterModel;
@@ -28,4 +28,3 @@ public class StaedtischeEinrichtungenControl implements Observer {
 }
 	
 	
-
