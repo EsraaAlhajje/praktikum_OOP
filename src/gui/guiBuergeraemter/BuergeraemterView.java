@@ -150,6 +150,7 @@ public class BuergeraemterView {
     	    });
  	    
  	    
+ 	    //a3alqha wa ahot satr wahed 
  	    
          mnItmCsvExport.setOnAction(new EventHandler<ActionEvent>() {
  	    	@Override
@@ -160,6 +161,8 @@ public class BuergeraemterView {
          
          
          
+          //a3alqha wa ahot satr wahed 
+         
          
          mnItmTxtExport.setOnAction(new EventHandler<ActionEvent>() {
  	    	@Override
@@ -167,8 +170,11 @@ public class BuergeraemterView {
  	    		schreibeBuergeraemterInDatei("txt");
  	        } 
          });
+         
+         mnItmCsvExport.setOnAction(e ->schreibeBuergeraemterInDatei("txt") );
      }
-    
+     
+        
     
     
     private void nehmeBuergeramtAuf(){
@@ -191,6 +197,7 @@ public class BuergeraemterView {
     
        void zeigeBuergeraemterAn(){
     		
+    	   		//tit3aer	
     	   
     	   if(buergeraemterModel.getBuergeramt() != null){
     			txtAnzeige.setText(buergeraemterModel.getBuergeramt()
@@ -198,6 +205,10 @@ public class BuergeraemterView {
     		}
     		
     		
+    	   
+    	    
+    	   
+    	   //
     		else{
     			zeigeInformationsfensterAn( "Bisher wurde kein Bürgeramt aufgenommen!");
     		}
@@ -207,8 +218,10 @@ public class BuergeraemterView {
        	new MeldungsfensterAnzeiger(AlertType.INFORMATION,
        		"Information", meldung).zeigeMeldungsfensterAn();
        }	
+     //mnItmTxtExport.setOnAction(e -> schreibeBuergeraemterInDatei("txt")) ;
+      
        
-      public void zeigeFehlermeldungsfensterAn(String meldung){
+       public void zeigeFehlermeldungsfensterAn(String meldung){
           	new MeldungsfensterAnzeiger(AlertType.ERROR,
            	"Fehler", meldung).zeigeMeldungsfensterAn();
        }
@@ -216,6 +229,8 @@ public class BuergeraemterView {
        
        
        private void schreibeBuergeraemterInDatei(String typ){
+    	   //hs
+    	   
    		buergeraemterControl.schreibeBuergeraemterInDatei(typ);
    		
    		
@@ -226,5 +241,49 @@ public class BuergeraemterView {
 }
 
 
-    
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////a3alqha wa ahot satr wahed 
+//mnItmCsvExport.setOnAction(e ->schreibeBuergeraemterInDatei("csv") );
+														   //("txt")
+
+//tit3aer
+/*
+if (buergeraemterModel.getBuergeraemterList().size()>0) {
+	   StringBuffer text = new StringBuffer(); 
+		
+		for (Buergeramt buergeramt : buergeraemterModel.getBuergeraemterList()) {
+        text.append(buergeramt.gibBuergeramtZurueck(' ')).append("\n");
+    }
+    txtAnzeige.setText(text.toString());
+*/
+
+
+//System.out.println("hs");

@@ -29,7 +29,7 @@ public class BuergeraemterControl implements ConcreteObserver{
 	   		if("csv".equals(typ)){
 	   			buergeraemterModel.schreibeBuergeraemterInCsvDatei();
 	   			buergeraemterView.zeigeInformationsfensterAn(
-	   				"Die Bürgerämter wurden gespeichert!");
+	   				"Die Buergeraemter wurden gespeichert!");
 	   			
 	   			
 	   			
@@ -37,7 +37,7 @@ public class BuergeraemterControl implements ConcreteObserver{
 	   		else{
 	   			buergeraemterModel.schreibeBuergeraemterInTxtDatei();
 	   			buergeraemterView.zeigeInformationsfensterAn(
-		   				"Die Bürgerämter wurden gespeichert!");
+		   				"Die Buergeraemter wurden gespeichert!");
 	   		}
 	    } 
 	   	

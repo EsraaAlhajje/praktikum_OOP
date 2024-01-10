@@ -1,13 +1,13 @@
 package business;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import fabrikMethode.ConcreteCsvCreator;
 import fabrikMethode.ConcreteTxtCreator;
 import fabrikMethode.Creator;
 import fabrikMethode.Product;
-
 import ownUtil.ConcreteObservable;
 import ownUtil.ConcreteObserver;
 
@@ -15,7 +15,7 @@ public class BuergeraemterModel implements ConcreteObservable{
 	
 
 	LinkedList<ConcreteObserver> liste = new LinkedList<ConcreteObserver>();
-	
+
 	private static BuergeraemterModel instanz=null;
 	
 	public static BuergeraemterModel getInstanz() {
@@ -24,8 +24,14 @@ public class BuergeraemterModel implements ConcreteObservable{
 		}
 		return instanz;
 		}
+	//
+	
+	//
+	
 	
  		
+	//
+	
 	private Buergeramt buergeramt;
 
 	public Buergeramt getBuergeramt() {
@@ -41,14 +47,18 @@ public class BuergeraemterModel implements ConcreteObservable{
 	    throws IOException{
 		Creator creator =new ConcreteCsvCreator();
 		Product writer = creator.factoryMethod();
+		//
 		writer.fuegeInDateiHinzu(buergeramt);
+		//
 		writer.schliessDatei();
 
  	}
 	public void schreibeBuergeraemterInTxtDatei()    throws IOException{
 		Creator creator =new ConcreteTxtCreator();
 		Product writer = creator.factoryMethod();
+		//
 		writer.fuegeInDateiHinzu(buergeramt);
+		//
 		writer.schliessDatei();
 	}
 	
@@ -96,8 +106,19 @@ public class BuergeraemterModel implements ConcreteObservable{
 
 
 
+//private ArrayList <Buergeramt> buergeraemterList = new ArrayList <Buergeramt>();
+
+/*
+public ArrayList<Buergeramt> getBuergeraemterList() {
+	 return buergeraemterList;
+ }
+private BuergeraemterModel () {
+}*/
 
 
+//for( Burgeramt burgeramt : buergeraemterList) {
+//writer.fuegeInDateiHinzu(buergeramt);
+//}
 
 
 
