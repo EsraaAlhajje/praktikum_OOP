@@ -24,41 +24,50 @@ public class BuergeraemterModel implements ConcreteObservable{
 		}
 		return instanz;
 		}
-	//
 	
-	//
+	//private Buergeramt buergeramt;
+	private ArrayList<Buergeramt> buergeramt = new ArrayList<Buergeramt>();
 	
 	
- 		
-	//
-	
-	private Buergeramt buergeramt;
-
+	private BuergeraemterModel () {
+	}
+	/*
 	public Buergeramt getBuergeramt() {
 		return this.buergeramt;
 	}
+	*/
 	
-	public void setBuergeramt(Buergeramt buergeramt) {
-		this.buergeramt = buergeramt;
+	
+	//alle vorhandenen ArrayList mit add bearbeiten (.dd()) 
+	public void addBuergeramt(Buergeramt buergeramt) {
+		this.buergeramt.add(buergeramt);
 		notifyObservers();
 	}
- 		
+	
+	
+	public ArrayList<Buergeramt> getBuergeramt() {
+		return buergeramt;
+	}
+
+
+	
 	public void schreibeBuergeraemterInCsvDatei()
 	    throws IOException{
 		Creator creator =new ConcreteCsvCreator();
 		Product writer = creator.factoryMethod();
-		//
+		for(Buergeramt buergeramt: buergeramt ) {
 		writer.fuegeInDateiHinzu(buergeramt);
-		//
+		}
 		writer.schliessDatei();
 
  	}
+
 	public void schreibeBuergeraemterInTxtDatei()    throws IOException{
 		Creator creator =new ConcreteTxtCreator();
 		Product writer = creator.factoryMethod();
-		//
-		writer.fuegeInDateiHinzu(buergeramt);
-		//
+		for(Buergeramt buergeramt: buergeramt ) {
+			writer.fuegeInDateiHinzu(buergeramt);
+		}
 		writer.schliessDatei();
 	}
 	
@@ -106,19 +115,29 @@ public class BuergeraemterModel implements ConcreteObservable{
 
 
 
-//private ArrayList <Buergeramt> buergeraemterList = new ArrayList <Buergeramt>();
-
-/*
-public ArrayList<Buergeramt> getBuergeraemterList() {
-	 return buergeraemterList;
- }
-private BuergeraemterModel () {
-}*/
 
 
-//for( Burgeramt burgeramt : buergeraemterList) {
-//writer.fuegeInDateiHinzu(buergeramt);
-//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

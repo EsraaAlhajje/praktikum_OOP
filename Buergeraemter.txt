@@ -1,5 +1,9 @@
 Daten des buergeramts
- Name des buergeramts	esra
-oeffnungszeit des buergeramts:	 22.0 44.0
-Strasse und Hausnummer des buergeramts:	huzu
-Dienstleistungen des buergeramts:	ijjh
+ Name des buergeramts	11
+oeffnungszeit des buergeramts:	 11.0 11.0
+Strasse und Hausnummer des buergeramts:	11
+Dienstleistungen des buergeramts:	11Daten des buergeramts
+ Name des buergeramts	22
+oeffnungszeit des buergeramts:	 22.0 22.0
+Strasse und Hausnummer des buergeramts:	22
+Dienstleistungen des buergeramts:	22-33

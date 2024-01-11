@@ -32,9 +32,9 @@ public class BuergeraemterView {
     private Label lblEingabe    	 		= new Label("Eingabe");
     private Label lblAnzeige   	 	    	= new Label("Anzeige");
     private Label lblName 					= new Label("Name:");
-    private Label lblGeoeffnetVon   		= new Label("GeÃ¶ffnet von:");
-    private Label lblGeoeffnetBis  	 		= new Label("GeÃ¶ffnet bis:");
-    private Label lblStrasseHNr   			= new Label("StraÃŸe und Hausnummer:");
+    private Label lblGeoeffnetVon   		= new Label("Geöffnet von:");
+    private Label lblGeoeffnetBis  	 		= new Label("Geöffnet bis:");
+    private Label lblStrasseHNr   			= new Label("Strasse und Hausnummer:");
     private Label lblDienstleistungen  		= new Label("Dienstleistungen:");
     private TextField txtName 	 			= new TextField();
     private TextField txtGeoeffnetVon		= new TextField();
@@ -151,27 +151,31 @@ public class BuergeraemterView {
  	    
  	    
  	    //a3alqha wa ahot satr wahed 
- 	    
+ 	    /*
          mnItmCsvExport.setOnAction(new EventHandler<ActionEvent>() {
  	    	@Override
  	        public void handle(ActionEvent e) {
  	    		schreibeBuergeraemterInDatei("csv");
  	    		} 
-         });
+         });*/
+ 	    
+         mnItmCsvExport.setOnAction(e ->schreibeBuergeraemterInDatei("csv") );
          
          
          
           //a3alqha wa ahot satr wahed 
          
-         
+         /*
          mnItmTxtExport.setOnAction(new EventHandler<ActionEvent>() {
  	    	@Override
  	        public void handle(ActionEvent e) {
  	    		schreibeBuergeraemterInDatei("txt");
  	        } 
          });
+         */
+         mnItmTxtExport.setOnAction(e ->schreibeBuergeraemterInDatei("txt") );
          
-         mnItmCsvExport.setOnAction(e ->schreibeBuergeraemterInDatei("txt") );
+       
      }
      
         
@@ -179,13 +183,13 @@ public class BuergeraemterView {
     
     private void nehmeBuergeramtAuf(){
        	try{
-       		buergeraemterModel.setBuergeramt(new Buergeramt(
+       		buergeraemterModel.addBuergeramt(new Buergeramt(
         		txtName.getText(), 
        	        Float.parseFloat(txtGeoeffnetVon.getText()),
        	        Float.parseFloat(txtGeoeffnetBis.getText()),
         		txtStrasseHNr.getText(),
         		txtDienstleistungen.getText().split(";")));
-       		    zeigeInformationsfensterAn("Das BÃ¼rgeramt wurde aufgenommen!");
+       		    zeigeInformationsfensterAn("Das Bürgeramt wurde aufgenommen!");
           	}
        	    catch(Exception exc){
        		    zeigeFehlermeldungsfensterAn(exc.getMessage());
@@ -198,19 +202,18 @@ public class BuergeraemterView {
        void zeigeBuergeraemterAn(){
     		
     	   		//tit3aer	
-    	   
-    	   if(buergeraemterModel.getBuergeramt() != null){
-    			txtAnzeige.setText(buergeraemterModel.getBuergeramt()
-    			.gibBuergeramtZurueck(' '));
+    	   if (buergeraemterModel.getBuergeramt().size()>0) {
+    		   StringBuffer text = new StringBuffer();
+    		   for (Buergeramt buergeramt : buergeraemterModel.getBuergeramt()) {
+    		        text.append(buergeramt.gibBuergeramtZurueck(' ')).append("\n");
     		}
-    		
-    		
     	   
-    	    
-    	   
+    		   this.txtAnzeige.setText(text.toString());
+    	   }
+    		
     	   //
     		else{
-    			zeigeInformationsfensterAn( "Bisher wurde kein BÃ¼rgeramt aufgenommen!");
+    			zeigeInformationsfensterAn( "Bisher wurde kein Bürgeramt aufgenommen!");
     		}
        }
        
@@ -218,7 +221,7 @@ public class BuergeraemterView {
        	new MeldungsfensterAnzeiger(AlertType.INFORMATION,
        		"Information", meldung).zeigeMeldungsfensterAn();
        }	
-     //mnItmTxtExport.setOnAction(e -> schreibeBuergeraemterInDatei("txt")) ;
+     
       
        
        public void zeigeFehlermeldungsfensterAn(String meldung){
@@ -229,7 +232,7 @@ public class BuergeraemterView {
        
        
        private void schreibeBuergeraemterInDatei(String typ){
-    	   //hs
+    	   
     	   
    		buergeraemterControl.schreibeBuergeraemterInDatei(typ);
    		
@@ -270,20 +273,31 @@ public class BuergeraemterView {
 
 
 
-////a3alqha wa ahot satr wahed 
-//mnItmCsvExport.setOnAction(e ->schreibeBuergeraemterInDatei("csv") );
-														   //("txt")
-
-//tit3aer
-/*
-if (buergeraemterModel.getBuergeraemterList().size()>0) {
-	   StringBuffer text = new StringBuffer(); 
-		
-		for (Buergeramt buergeramt : buergeraemterModel.getBuergeraemterList()) {
-        text.append(buergeramt.gibBuergeramtZurueck(' ')).append("\n");
-    }
-    txtAnzeige.setText(text.toString());
-*/
 
 
-//System.out.println("hs");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

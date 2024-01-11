@@ -20,9 +20,10 @@ public class Buergeramt {
     
     
     // Dienstleistungen des Buergeramtes
-    private String[] dienstleistungen;
+   // private String[] dienstleistungen;
+    private ArrayList <String> dienstleistungen = new ArrayList<String>();
     
-    //atri jdid 
+   
     
 
     public Buergeramt(String name, float geoeffnetVon, float geoeffnetBis,
@@ -31,16 +32,23 @@ public class Buergeramt {
   	    this.geoeffnetVon = geoeffnetVon;
    	    this.geoeffnetBis = geoeffnetBis;
    	    this.strasseHNr = strasseHNr;
-   	    //na3rfha 3an tareeq el set ()
-   	    this.dienstleistungen = dienstleistungen;
-   	// 
+   	   
+   	   // this.dienstleistungen = dienstleistungen;
+   	    this.setDienstleistungenAusString(dienstleistungen);
+   	 
     }
-    //
    
-    
-    
-    
-    //
+   	    private void setDienstleistungenAusString(String [] dienstleistungen) {
+   	    	this.setDienstleistungen(new ArrayList<String>());
+   	    	for (int i = 0; i < dienstleistungen.length; i++) {
+				this.dienstleistungen.add(dienstleistungen[i]);
+				
+			}
+   	    	
+   	    }
+   	   
+   	    
+   	    
     
 	public String getName() {
 		return name;
@@ -73,12 +81,21 @@ public class Buergeramt {
 	public void setStrasseHNr(String strasseHNr) {
 		this.strasseHNr = strasseHNr;
 	}
-    //yet3arafo jdid
-	
+    
+	/*
 	public String[] getDienstleistungen() {
 		return dienstleistungen;
 	}
 	public void setDienstleistungen(String[] dienstleistungen) {
+		this.dienstleistungen = dienstleistungen;
+	}
+	*/
+	
+	public ArrayList <String> getDienstleistungen() {
+		return dienstleistungen;
+	}
+
+	public void setDienstleistungen(ArrayList <String> dienstleistungen) {
 		this.dienstleistungen = dienstleistungen;
 	}
 	
@@ -87,12 +104,12 @@ public class Buergeramt {
 	//tit3aer
 	public String getDienstleistungenAlsString(char trenner) {
 		String ergebnis = "";
-		int i = 0;                               //.size()
-		for(i = 0; i < this.getDienstleistungen().length - 1; i++) {
-			                                               //.get(i)
-			ergebnis = ergebnis + this.getDienstleistungen().length + trenner; 
-		}                                          //.get(i)
-		return ergebnis	+ this.getDienstleistungen()[i];
+		int i = 0;                              
+		for(i = 0; i < this.getDienstleistungen().size() - 1; i++) {
+			                                               
+			ergebnis = ergebnis + this.getDienstleistungen().get(i) + trenner; 
+		}                                      
+		return ergebnis	+ this.getDienstleistungen().get(i);
 	}
 	
 	public String gibBuergeramtZurueck(char trenner){
@@ -102,6 +119,8 @@ public class Buergeramt {
   		    + this.getStrasseHNr() + trenner + "\n"
   		    + this.getDienstleistungenAlsString(trenner) + "\n";
   	}
+
+	
 
 }
 
@@ -128,32 +147,6 @@ public class Buergeramt {
 
 
 
-
-
-//private ArrayList<String> dienstleistungen = new ArrayList<String>();
-//bilKonstruktur -> this.setDienstleistungAusStringArray(dienstleistungen);
-
-
-/*
-private void setDienstleistungAusStringArray(String[] dienstleistungen) {
-	this.dienstleistungen = new ArrayList<String>();
-	
-	for (int i = 0; i < dienstleistungen.length; i++) {
-		this.dienstleistungen.add(dienstleistungen[i]);
-		
-	}
-}*/
-
-
-/*
-public String getDienstleistungenAlsString(char trenner) {
-	String ergebnis = "";
-	int i = 0;
-	for(i = 0; i < this.getDienstleistungen().size() -1 ; i++) {
-		ergebnis = ergebnis + this.getDienstleistungen().get(i) + trenner; 
-	}
-	return ergebnis	+ this.getDienstleistungen().get(i);
-}*/
 
 
 
