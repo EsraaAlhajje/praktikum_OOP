@@ -32,8 +32,8 @@ public class BuergeraemterView {
     private Label lblEingabe    	 		= new Label("Eingabe");
     private Label lblAnzeige   	 	    	= new Label("Anzeige");
     private Label lblName 					= new Label("Name:");
-    private Label lblGeoeffnetVon   		= new Label("Geöffnet von:");
-    private Label lblGeoeffnetBis  	 		= new Label("Geöffnet bis:");
+    private Label lblGeoeffnetVon   		= new Label("GeÃ¶ffnet von:");
+    private Label lblGeoeffnetBis  	 		= new Label("GeÃ¶ffnet bis:");
     private Label lblStrasseHNr   			= new Label("Strasse und Hausnummer:");
     private Label lblDienstleistungen  		= new Label("Dienstleistungen:");
     private TextField txtName 	 			= new TextField();
@@ -189,7 +189,7 @@ public class BuergeraemterView {
        	        Float.parseFloat(txtGeoeffnetBis.getText()),
         		txtStrasseHNr.getText(),
         		txtDienstleistungen.getText().split(";")));
-       		    zeigeInformationsfensterAn("Das Bürgeramt wurde aufgenommen!");
+       		    zeigeInformationsfensterAn("Das BÃ¼rgeramt wurde aufgenommen!");
           	}
        	    catch(Exception exc){
        		    zeigeFehlermeldungsfensterAn(exc.getMessage());
@@ -213,7 +213,7 @@ public class BuergeraemterView {
     		
     	   //
     		else{
-    			zeigeInformationsfensterAn( "Bisher wurde kein Bürgeramt aufgenommen!");
+    			zeigeInformationsfensterAn( "Bisher wurde kein BÃ¼rgeramt aufgenommen!");
     		}
        }
        
