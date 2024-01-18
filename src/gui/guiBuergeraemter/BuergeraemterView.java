@@ -32,8 +32,8 @@ public class BuergeraemterView {
     private Label lblEingabe    	 		= new Label("Eingabe");
     private Label lblAnzeige   	 	    	= new Label("Anzeige");
     private Label lblName 					= new Label("Name:");
-    private Label lblGeoeffnetVon   		= new Label("GeÃ¶ffnet von:");
-    private Label lblGeoeffnetBis  	 		= new Label("GeÃ¶ffnet bis:");
+    private Label lblGeoeffnetVon   		= new Label("Geöffnet von:");
+    private Label lblGeoeffnetBis  	 		= new Label("Geöffnet bis:");
     private Label lblStrasseHNr   			= new Label("Strasse und Hausnummer:");
     private Label lblDienstleistungen  		= new Label("Dienstleistungen:");
     private TextField txtName 	 			= new TextField();
@@ -54,7 +54,7 @@ public class BuergeraemterView {
     	Stage primaryStage, BuergeraemterModel buergeraemterModel){
        	Scene scene = new Scene(this.pane, 700, 340);
     	primaryStage.setScene(scene);
-    	primaryStage.setTitle("Verwaltung von BÃ¼rgerÃ¤mtern");
+    	primaryStage.setTitle("Verwaltung von Bürgerämtern");
     	primaryStage.show();
       	this.buergeraemterControl = buergeraemterControl;
     	this.buergeraemterModel = buergeraemterModel;

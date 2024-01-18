@@ -31,11 +31,11 @@ public class BuergeramtTest {
 	
 	@Test
 	void test() {
-		String[] dienstleistung = new String[] {"Hauptwohmsitz", "Nebenwohnsitz"};  
-		Buergeramt buergeramt = new Buergeramt("BÃ¼rgerbÃ¼ro Querenburg", 9.00f, 17.00f, "Querenburger HÃ¶he 256", dienstleistung);
+		String[] dienstleistung = new String[] {"Hauptwohnsitz", "Nebenwohnsitz"};  
+		Buergeramt buergeramt = new Buergeramt("Bürgerbüro Querenburg", 9.00f, 17.00f, "Querenburger Höhe 256", dienstleistung);
 		
 		BooleanSupplier isNameCorrect = () ->  {
-			if( buergeramt.getName() == "BÃ¼rgerbÃ¼ro Querenburg") {
+			if( buergeramt.getName() == "Bürgerbüro Querenburg") {
 				return true;
 
 			}
